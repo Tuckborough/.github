@@ -1,0 +1,36 @@
+name: 📋 Chore / Task
+description: Maintenance tasks, dependency updates, configuration tweaks, or minor enhancements.
+title: "Task: [Task description]"
+labels: ["type:task", "status:backlog"]
+body:
+  - type: textarea
+    id: task_description
+    attributes:
+      label: Description of Task
+      description: What needs to be done?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Assigned Role / Domain
+      options:
+        - "role:dev"
+        - "role:qa"
+        - "role:devops"
+        - "role:design"
+        - "role:product"
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist / Sub-tasks
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Verification
+    validations:
+      required: true

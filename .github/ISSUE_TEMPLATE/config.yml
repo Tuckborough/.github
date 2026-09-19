@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Cleva Documentation & Architecture
+    url: https://github.com/Tuckborough/cleva-docs
+    about: Explore the business plan, product dossiers, data vocabularies, and system architecture.
+  - name: 🎨 Figma UI Specifications (Cleva — Écrans de l'app)
+    url: https://www.figma.com/design/vJVrwyLcEqnQvFjYYBnznh/Cleva-%E2%80%94-%C3%89crans-de-l-app
+    about: View screens, components, and design tokens for Web, iOS, and Android.
+  - name: 🔒 DevSecOps & Pipeline Templates
+    url: https://github.com/Tuckborough/cleva-devops
+    about: Reusable CI/CD workflows, compliance rules, and security scanners.

@@ -1,0 +1,56 @@
+name: 💡 Feature / Epic
+description: Propose a major capability, strategic epic, or new product module.
+title: "Feature: [Feature Name]"
+labels: ["type:feature", "status:backlog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Feature / Epic Scope
+        Features span multiple user stories or multiple components (Backend, Web, Mobile, AI).
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Business Problem & Objective
+      description: What real estate broker challenge or business goal does this feature solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: High-Level Solution
+      description: Describe the core workflow, interactions, and user expectations.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business Priority
+      options:
+        - "priority:P1-high"
+        - "priority:P2-medium"
+        - "priority:P3-low"
+    validations:
+      required: true
+
+  - type: input
+    id: documentation_ref
+    attributes:
+      label: Related Documentation / Dossier
+      description: File in cleva-docs (e.g. product/views/brief.md or business-plan/dossier-app.pdf).
+      placeholder: "cleva-docs/product/views/brief.md"
+
+  - type: textarea
+    id: child_stories
+    attributes:
+      label: Sub-Stories / Breakdown
+      description: List planned user stories or deliverables.
+      placeholder: |
+        - [ ] Story 1: Database schema & API contracts
+        - [ ] Story 2: Figma component design & token export
+        - [ ] Story 3: Web frontend implementation
+        - [ ] Story 4: iOS native implementation
+        - [ ] Story 5: QA end-to-end testing
