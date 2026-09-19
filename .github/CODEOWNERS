@@ -1,0 +1,21 @@
+# Tuckborough Global CODEOWNERS
+# Automatically assigns code reviewers based on file paths and domain gates.
+
+# Default org leads
+* @Darktripe
+
+# DevSecOps & Pipeline Templates
+/cleva-devops/ @Darktripe
+/.github/workflows/ @Darktripe
+
+# AI & Sovereign Gateway Logic
+*sovereign* @Darktripe
+*llm* @Darktripe
+
+# Privacy & Compliance (Québec Law 25)
+*compliance* @Darktripe
+*law25* @Darktripe
+*ged* @Darktripe
+
+# Centris MLS Integration
+*centris* @Darktripe

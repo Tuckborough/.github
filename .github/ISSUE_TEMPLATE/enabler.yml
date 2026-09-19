@@ -1,0 +1,52 @@
+name: ⚙️ Enabler / Tech Spike
+description: Architectural foundations, DevOps infrastructure, technical debt, or research spikes.
+title: "Enabler: [Technical Objective]"
+labels: ["type:enabler", "status:backlog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Architectural & Technical Foundation
+        Enablers support future business functionality by building out pipelines, refactoring, or evaluating technologies.
+
+  - type: dropdown
+    id: enabler_category
+    attributes:
+      label: Enabler Type
+      options:
+        - "Architecture / Data Model"
+        - "DevSecOps / CI-CD Pipeline"
+        - "Security / Privacy Compliance (Law 25)"
+        - "AI / Sovereign Inference Gateway"
+        - "Technical Spike / POC"
+        - "Tech Debt / Refactoring"
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical Need / Background
+      description: What is the current technical limitation or requirement?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_implementation
+    attributes:
+      label: Proposed Solution & Approach
+      description: Specific tools, packages, or architectural changes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Expected Deliverables
+      description: Code, RFC document, benchmark results, or pipeline configuration.
+      placeholder: |
+        - [ ] Reusable workflow in cleva-devops
+        - [ ] OpenAPI schema validated
+        - [ ] Benchmark comparison report
+    validations:
+      required: true

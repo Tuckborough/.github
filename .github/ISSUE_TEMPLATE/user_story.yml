@@ -1,0 +1,77 @@
+name: 📖 User Story
+description: Define an agile user story with acceptance criteria, Figma links, and target platforms.
+title: "Story: [Short descriptive title]"
+labels: ["type:user-story", "status:backlog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### User Story Definition
+        Follow standard agile format with clear user persona and business value.
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: Story Statement
+      description: Follow the "As a... I want... So that..." format.
+      placeholder: |
+        - **As a** real estate broker (courtier immobilier au Québec),
+        - **I want** to see an immediate breakdown of hot Centris alerts in my daily brief,
+        - **So that** I can follow up with my active buyers within 15 minutes of a new listing.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role_owner
+    attributes:
+      label: Primary Role / Domain
+      description: Which team leads the primary implementation?
+      options:
+        - "role:dev (Fullstack / General)"
+        - "role:frontend (Web App)"
+        - "role:mobile (iOS / Android)"
+        - "role:backend (API & Server)"
+        - "role:design (UI / UX Exploration)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Target Platforms / Components
+      description: Select all affected applications.
+      options:
+        - label: Web Desktop (`cleva-web`)
+        - label: iOS Native (`cleva-ios`)
+        - label: Android Native (`cleva-android`)
+        - label: Backend API & AI Gateway (`cleva-backend`)
+
+  - type: input
+    id: figma_link
+    attributes:
+      label: Figma Frame / Screen Reference
+      description: Direct link to the corresponding frame in Figma (Cleva — Écrans de l'app).
+      placeholder: "https://www.figma.com/design/vJVrwyLcEqnQvFjYYBnznh/Cleva-%E2%80%94-%C3%89crans-de-l-app?node-id=..."
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (Gherkin format)
+      description: Given... When... Then... scenarios for QA and engineering validation.
+      placeholder: |
+        Scenario 1: New listing matching client search
+        Given a client has an active Centris search criteria,
+        When a new listing is published on Centris matching price and location,
+        Then a hot alert badge appears on the broker's Brief view.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: domain_gates_check
+    attributes:
+      label: Domain & Compliance Gates (Declaration)
+      description: Check any areas impacted by this user story.
+      options:
+        - label: "🏛️ Québec Law 25: Collects or displays client PII (requires explicit consent/masking)"
+        - label: "🤖 AI Assistant: Generates text or recommendations (requires broker human-in-the-loop validation)"
+        - label: "🏠 Centris MLS: Ingests listing data (requires rate-limit compliance)"
