@@ -32,6 +32,8 @@ body:
         - "role:mobile (iOS / Android)"
         - "role:backend (API & Server)"
         - "role:design (UI / UX Exploration)"
+        - "role:devops (Infrastructure & Cloud)"
+        - "role:devsecops (Security & Compliance)"
     validations:
       required: true
 
