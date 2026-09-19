@@ -11,6 +11,7 @@
   { "name": "role:design", "color": "E99695", "description": "Requires Figma / UI / UX design work" },
   { "name": "role:qa", "color": "D4C5F9", "description": "Requires testing, verification, or test plan" },
   { "name": "role:devops", "color": "C5DEF5", "description": "Pipeline, Docker, or infrastructure work" },
+  { "name": "role:devsecops", "color": "1D76DB", "description": "Security pipelines, Semgrep SAST, Trivy SCA, Gitleaks, and compliance gates" },
   { "name": "role:product", "color": "BFD4F2", "description": "Product management, scope, or user requirements" },
   { "name": "status:backlog", "color": "E11D21", "description": "Candidate work item in backlog" },
   { "name": "status:ready-for-dev", "color": "0E8A16", "description": "Meets Definition of Ready (Figma & specs ready)" },
