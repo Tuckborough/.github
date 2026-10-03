@@ -7,15 +7,25 @@ Welcome to the **Tuckborough** development team! This handbook defines the engin
 ## 1. Safety & Branching Policy (DevSecOps Standard)
 
 > [!CAUTION]
-> **Direct pushes to `main` are strictly prohibited across all organization repositories.**
-> All changes must be introduced via topic branches and pull requests subject to automated DevSecOps validation.
+> **Pushing directly to `main` is strictly prohibited across all organization repositories.**
+> **All changes must reach `main` exclusively via a Pull Request (PR) after peer review and automated DevSecOps validation.**
+> **Merge commits are strictly prohibited.** All branches must use **Rebase** (`git pull --rebase`, `git rebase origin/main`, and GitHub "Rebase and merge").
+> **Always obtain explicit user approval before pushing anything to any remote branch.**
 
-### Branch Naming Conventions
-- **`feat/<issue-id>-<short-description>`**: New user story or feature (e.g. `feat/1-brief-metrics`)
+See [BRANCHING_STRATEGY.md](BRANCHING_STRATEGY.md) for full protocol details.
+
+### Strict Branch Naming Standard
+Every branch must strictly adhere to the standard pattern:
+$$\mathbf{<type>/<issue-id>-<short-slug-in-kebab-case>}$$
+
+- **`enabler/<issue-id>-<short-description>`**: Technical foundation, database schema evolution, architecture spike, or CI update (e.g. `enabler/1-database-schema-ged-extraction`)
+- **`feat/<issue-id>-<short-description>`**: New user story or feature (e.g. `feat/12-oaciq-client-onboarding`)
 - **`fix/<issue-id>-<short-description>`**: Defect remediation (e.g. `fix/14-centris-sync-timeout`)
-- **`enabler/<issue-id>-<short-description>`**: Technical foundation, architecture spike, or CI update
-- **`docs/<issue-id>-<short-description>`**: Documentation or business plan updates
-- **`sec/<issue-id>-<short-description>`**: Vulnerability fix or security hardening
+- **`docs/<issue-id>-<short-description>`**: Documentation, architectural RFCs, or business plan updates (e.g. `docs/8-database-schema-uml`)
+- **`refactor/<issue-id>-<short-description>`**: Code restructuring without behavior changes (e.g. `refactor/23-extract-pydantic-validators`)
+- **`chore/<issue-id>-<short-description>`**: Routine maintenance, dependency updates (e.g. `chore/99-bump-ruff`)
+- **`test/<issue-id>-<short-description>`**: Test suite enhancements, regression fixtures (e.g. `test/33-add-oaciq-pdf-fixtures`)
+- **`sec/<issue-id>-<short-description>`**: Law 25 compliance vulnerability fix or security hardening (e.g. `sec/101-sha256-audit-chain`)
 
 ---
 
